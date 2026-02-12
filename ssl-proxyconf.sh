@@ -20,7 +20,7 @@ use_lets_encrypt_certificates() {
 	sed '/^#\(.*\)httpd-ssl\.conf/ s/^#//' $3/httpd.conf > $3/httpd.conf.bak
 }
 
-reload_webserver() {
+reload_proxy() {
 	cp $1/extra/httpd-vhosts.conf.bak $1/extra/httpd-vhosts.conf
 	cp $1/extra/httpd-ssl.conf.bak $1/extra/httpd-ssl.conf
 	cp $1/httpd.conf.bak $1/httpd.conf
@@ -42,14 +42,14 @@ wait_for_lets_encrypt() {
 		done
 	fi;
 	use_lets_encrypt_certificates "$1" "$2" "$3"
-	reload_webserver "$3"
+	reload_proxy "$3"
 }
 
 if [ ! -d "$2/live/$1" ]; then
 	wait_for_lets_encrypt "$1" "$2" "$3" &
 else
 	use_lets_encrypt_certificates "$1" "$2" "$3"
-	reload_webserver "$3"
+	reload_proxy "$3"
 fi
 
 httpd-foreground
