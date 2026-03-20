@@ -294,7 +294,7 @@ SSLCertificateChainFile "/etc/letsencrypt/live/example.com/chain.pem"
     SSLOptions +StdEnvVars
 </Directory>
 
-Include /etc/letsencrypt/options-ssl-apache.conf
+Include /etc/letsencrypt/options-ssl-apache-webserver.conf
 
 #   SSL Protocol Adjustments:
 #   The safe and default but still SSL/TLS standard compliant shutdown
@@ -351,7 +351,7 @@ CustomLog "/usr/local/apache2/logs/ssl_request_log" \
 	SSLCertificateFile "/etc/letsencrypt/live/example.com/fullchain.pem"
 	SSLCertificateKeyFile "/etc/letsencrypt/live/example.com/privkey.pem"
 	SSLCertificateChainFile "/etc/letsencrypt/live/example.com/chain.pem"
-	Include /etc/letsencrypt/options-ssl-apache.conf
+	Include /etc/letsencrypt/options-ssl-apache-webserver.conf
 
 	# Log stuff
 	ErrorLog "/usr/local/apache2/logs/compass.example.com.error_log"
