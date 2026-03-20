@@ -55,7 +55,7 @@ services:
               target: '${HTTPD_PREFIX}/conf'
             - type: bind
               source: ./proxy/ssl-option/options-ssl-apache.conf
-              target: '${LETSENCRYPT_CONF_PREFIX}/options-ssl-apache.conf'
+              target: '${LETSENCRYPT_CONF_PREFIX}/options-ssl-apache-webserver.conf'
             - type: bind
               source: ./ssl-proxyconf.sh
               target: '/tmp/ssl-proxyconf.sh'
@@ -72,7 +72,7 @@ services:
             test: ["CMD-SHELL", "/bin/pidof httpd > /dev/null || exit 1"]
             interval: 10s
             timeout: 5s
-            retries: 5
+            retries: 20
         environment:
             TZ: '${LOCAL_TIMEZONE}'
         command: bash -c "sh /tmp/ssl-proxyconf.sh '${SUBDOMAIN}.${DOMAIN_NAME}' '${LETSENCRYPT_CONF_PREFIX}' '${HTTPD_PREFIX}/conf'"
