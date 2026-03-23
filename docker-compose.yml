@@ -54,8 +54,8 @@ services:
               source: ./proxy/conf
               target: '${HTTPD_PREFIX}/conf'
             - type: bind
-              source: ./proxy/ssl-option/options-ssl-apache.conf
-              target: '${LETSENCRYPT_CONF_PREFIX}/options-ssl-apache-webserver.conf'
+              source: ./proxy/ssl-option/options-ssl-apache-proxy.conf
+              target: '${LETSENCRYPT_CONF_PREFIX}/options-ssl-apache-proxy.conf'
             - type: bind
               source: ./ssl-proxyconf.sh
               target: '/tmp/ssl-proxyconf.sh'
