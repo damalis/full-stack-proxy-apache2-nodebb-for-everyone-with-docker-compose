@@ -7,7 +7,6 @@ If You want to install NodeBB at short time;
 [![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)](https://www.docker.com/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 [![Apache2 Proxy](https://img.shields.io/badge/Apache2-Reverse%20Proxy-D22128?logo=apache&logoColor=white)](https://nginx.com/)
-[![Apache2](https://img.shields.io/badge/Apache2-D22128?style=flat&logo=apache&logoColor=white)](https://www.apache.org)
 [![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white)](https://www.php.net)
 [![Certbot](https://img.shields.io/badge/Certbot-003A70?style=flat&logo=letsencrypt&logoColor=white)](https://certbot.eff.org/)
 [![Let's Encrypt](https://img.shields.io/badge/Let's%20Encrypt-003A70?style=flat&logo=letsencrypt&logoColor=white)](https://letsencrypt.org/)
